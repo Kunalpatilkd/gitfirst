@@ -1,7 +1,5 @@
 from flask import *
-from registerauthor_dbm import *
-from user_registration_form_dbm import *
-
+from db import *
 
 
 app=Flask(__name__)
@@ -35,7 +33,7 @@ def Addnewblogpost():
     return render_template("Add new blog post.html")
 
 @app.route("/Your Post")
-def Yourpost():
+def Yourposta():
     d=selectAllpost()
     return render_template("Your Post.html",data=d)
 
@@ -104,5 +102,4 @@ def shw1():
 if __name__=='__main__':
     app.run(debug=True)
 
-#changes
-#third changes
+

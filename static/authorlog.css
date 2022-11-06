@@ -86,14 +86,6 @@ div {
     color: blue;
 }
 
-.my-button {
-    margin-top: 10px;
-    height: 36px;
-    width: 100px;
-    background-color: rgba(211, 132, 28, 0.329);
-    border-radius: 15px 60px;
-    color: rgb(249, 249, 252);
-}
 
 .reset {
     margin-left: 100px;

@@ -13,6 +13,7 @@ def insert(t):
     con.commit()
     con.close()
 
+
 def bloginsert(v):
     con=connect()
     cur=con.cursor()
@@ -44,31 +45,27 @@ def selectAllpost():
     return data
 
 
-def editdetails(e):
+#user
+
+def userinsert(u):
     con=connect()
     cur=con.cursor()
-    sql="select * from author where email=%s"
-    cur.execute(sql,e)
-    userdetails=cur.fetchall()
-    con.commit()
-    con.close()
-    return userdetails
-
-
-def update(t):
-    con=connect()
-    cur=con.cursor()
-    sql="update author set name=%s,city=%s,email=%s,pasword=%s where email=%s"
-    cur.execute(sql,t)
+    sql="insert into user values(%s,%s,%s,%s)"
+    cur.execute(sql,u)
     con.commit()
     con.close()
 
-
-def drop(e):
+def usercheck(email):
     con=connect()
     cur=con.cursor()
-    sql="delete from author where email=%s"
-    cur.execute(sql,e)
+    sql="select Email_id,Password from user where Email_id=%s"
+    cur.execute(sql,email)
+    data=cur.fetchall()
     con.commit()
     con.close()
-    
+    return data    
+
+
+
+
+
