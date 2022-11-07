@@ -33,7 +33,6 @@ def Authorcheck(email):
     return data    
 
 
-
 def selectAllpost():
     con=connect()
     cur=con.cursor()
@@ -45,7 +44,6 @@ def selectAllpost():
     return data
 
 
-#user
 
 def userinsert(u):
     con=connect()

@@ -36,6 +36,7 @@ def Addnewblogpost():
 def Yourposta():
     d=selectAllpost()
     return render_template("Your Post.html",data=d)
+ 
 
 
 @app.route("/insertdata",methods=["post"])
@@ -80,6 +81,8 @@ def shw():
     else:
   
         return render_template("home.html")
+
+        
 
 @app.route("/show_data1", methods=["post"])
 def shw1():
