@@ -22,6 +22,7 @@ def bloginsert(v):
     con.commit()
     con.close()
 
+
 def Authorcheck(email):
     con=connect()
     cur=con.cursor()
@@ -53,6 +54,8 @@ def userinsert(u):
     con.commit()
     con.close()
 
+
+
 def usercheck(email):
     con=connect()
     cur=con.cursor()
@@ -62,7 +65,7 @@ def usercheck(email):
     con.commit()
     con.close()
     return data    
-
+       
 
 
 

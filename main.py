@@ -33,11 +33,10 @@ def Addnewblogpost():
     return render_template("Add new blog post.html")
 
 @app.route("/Your Post")
-def Yourposta():
+def Yourpost():
     d=selectAllpost()
     return render_template("Your Post.html",data=d)
  
-
 
 @app.route("/insertdata",methods=["post"])
 def insertdata():
@@ -70,6 +69,7 @@ def newblogtdata():
     bloginsert(v)
     return redirect("/")    
 
+
 @app.route("/show_data",methods=["post"])
 def shw():
     email=request.form["email"]
@@ -84,7 +84,7 @@ def shw():
 
         
 
-@app.route("/show_data1", methods=["post"])
+@app.route("/show_data1",methods=["post"])
 def shw1():
     email=request.form["email"]
     password=request.form["password"]
@@ -95,7 +95,6 @@ def shw1():
     else:
         
         return render_template("home.html")        
-
 
 
 
