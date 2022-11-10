@@ -36,6 +36,11 @@ def Addnewblogpost():
 def Yourpost():
     d=selectAllpost()
     return render_template("Your Post.html",data=d)
+
+@app.route("/ShowYourPost")
+def Showyourpost():
+    d=selectAllpost()
+    return render_template("ShowYourPost.html",data=d)    
  
 
 @app.route("/insertdata",methods=["post"])
@@ -91,11 +96,10 @@ def shw1():
     t=(email,password)
     t1=usercheck(email)
     if t in t1:
-         return render_template("Your Post.html")
+         return render_template("ShowYourPost.html")
     else:
         
         return render_template("home.html")        
-
 
 
 
