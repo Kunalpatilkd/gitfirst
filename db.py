@@ -26,7 +26,7 @@ def bloginsert(v):
 def Authorcheck(email):
     con=connect()
     cur=con.cursor()
-    sql="select Email_id,Password from Author where Email_id=%s"
+    sql="select Email_id,Password from author where Email_id=%s"
     cur.execute(sql,email)
     data=cur.fetchall()
     con.commit()
@@ -65,6 +65,12 @@ def usercheck(email):
     con.commit()
     con.close()
     return data    
+
+
+
+
+
+
        
 
 
