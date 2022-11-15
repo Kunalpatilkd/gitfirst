@@ -77,7 +77,7 @@ def shw():
     t=(email,password)
     t1=Authorcheck(email)
     if t in t1:
-         return render_template("Author Interface.html")
+        return render_template("Author Interface.html")
     else:
   
         return render_template("home.html")
@@ -91,7 +91,8 @@ def shw1():
     t=(email,password)
     t1=usercheck(email)
     if t in t1:
-         return render_template("Your Post.html")
+        d=selectAllpost()
+        return render_template("Your Post.html",data=d)
     else:
         
         return render_template("home.html")        
